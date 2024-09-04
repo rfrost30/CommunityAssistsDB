@@ -1,0 +1,222 @@
+//Constant for background color across pages
+$lightGreen: #b9e7e7;
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+
+    .container{
+        width: 1024px;
+
+        .link{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        //LOGIN and REGISTER
+        .auth{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightGreen;
+
+            h1{
+                font-size: 30px;
+                color: teal;
+                margin-bottom: 20px;
+            }
+
+            form{
+                display: flex;
+                flex-direction: column;
+                padding: 40px;
+                background-color: white;
+                width: 300px;
+                gap: 20px;
+                border-radius: 10px;
+            }
+
+            input{
+                padding: 20px;
+                border: none;
+                border-bottom: 1px solid gray;
+                border-radius: 3px;
+                
+            }
+
+            button{
+                padding: 10px;
+                border: none;
+                background-color: teal;
+                cursor: pointer;
+                color: white;
+            }
+
+            p{
+                font-size: 12px;
+                color: red;
+                text-align: center;
+            }
+
+            span{
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        //NAVBAR
+
+        .navbar{
+            .container{
+                padding: 10px 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .links{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                h6{
+                    font-size: 16px;
+                    font-weight: 100;
+                }
+
+                span{
+                    cursor: pointer;
+                    font-weight: 1000;
+                }
+
+            }
+        }
+
+        //Footer
+        footer{
+            margin-top: 100px;
+            padding: 20px;
+            background-color: $lightGreen;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            img{
+                height: 50px;
+            }
+        }
+ 
+        //HOME
+        .home {
+            .facilities {
+              margin-top: 50px;
+              display: flex;
+              flex-direction: column;
+              
+
+              .header{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 0;
+                font-weight: bold;
+                border-bottom: 1px solid #ccc;
+
+                /* Apply padding to move elements inward from edges */
+                & > *:first-child {
+                    margin-left: 35px;  /* Move the first element inward */
+                }
+
+                & > *:last-child {
+                    margin-right: 80px;  /* Move the last element inward */
+                }
+              }
+
+                //alternates colors of rows and changes color when hovering
+              .facility {
+                &:nth-child(odd) {
+                  .content {
+                    background-color: rgb(232, 245, 247); // Light color for odd rows
+
+                    &:hover {
+                        background-color: $lightGreen;
+                    }
+                  }
+                }
+          
+                &:nth-child(even) {
+                  .content {
+                    background-color: white; // Slightly darker color for even rows
+
+                    &:hover {
+                        background-color: $lightGreen;
+                    }
+                  }
+                }
+              }
+          
+                .content{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #ccc;
+
+                    /* Apply padding to move elements inward from edges */
+                    & > *:first-child {
+                        margin-left: 50px;  /* Move the first element inward */
+                    }
+
+                    & > *:last-child {
+                        margin-right: 50px;  /* Move the last element inward */
+                    }
+
+                    /*This is the "Facility Name" that is a link to the facility page*/
+                    // TODO might be useful to have the whole row be the link instead of just the facility name be clickable
+                    h1{
+                        font-weight: 100;
+                        font-size: 20px;
+                    }
+
+                }
+                
+            }
+        }
+
+        //FACILITY
+
+        .facility{
+            display: flex;
+            gap: 50px;
+
+            .content{
+                flex:5;
+            }
+
+            .menu{
+                flex:2;
+            }
+
+            button{
+                cursor: pointer;
+                border-radius: 5px;
+                            
+                &:hover{
+                    background-color: white;
+                    
+                }
+            }
+        }
+
+    }
+
+}
