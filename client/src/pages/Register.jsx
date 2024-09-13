@@ -29,7 +29,7 @@ const Register = () => {
       <h1>Register</h1>
       <form>
         <input required type="text" placeholder='username' name="username" onChange={handleChange}/>
-        <input required type="text" placeholder='email' name="email "onChange={handleChange}/>
+        <input required type="text" placeholder='email' name="email" onChange={handleChange}/>
         <input required type="text" placeholder='password' name="password" onChange={handleChange}/>
         <button onClick={handleSubmit}>Register</button>
         <p>Register error</p>

@@ -3,6 +3,9 @@ import bcrypt from "bcryptjs"
 
 export const register = (req,res)=>{
 
+    console.log(req.body);
+
+
     //Check for existing user
     const q  = "SELECT * FROM users WHERE email = ? OR username = ?";
 
