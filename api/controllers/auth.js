@@ -3,6 +3,9 @@ import bcrypt from "bcryptjs"
 
 export const register = (req,res)=>{
 
+    console.log(req.body);
+
+
     //Check for existing user
     const q  = "SELECT * FROM users WHERE email = ? OR username = ?";
 
@@ -29,7 +32,7 @@ export const register = (req,res)=>{
 
         db.query(q,[values], (err,data)=>{
             if (err) return res.json(err);
-            return res.status(200).json("User has been created.",data)
+            return res.status(200).json("User has been created.")
 
         });
     });
