@@ -1,11 +1,20 @@
 //routes for facility information. Functions are in the controllers
 
 import express from "express";
-import { addFacility } from "../controllers/facilities.js";
+import {
+  addFacility,
+  deleteFacility,
+  getAllFacilities,
+  getFacility,
+  updateFacility,
+} from "../controllers/facilities.js";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get("/test", addFacility)
+router.get("/", getAllFacilities);
+router.get("/:id", getFacility);
+router.post("/", addFacility);
+router.delete("/:id", deleteFacility);
+router.put("/:id", updateFacility);
 
-export default router
-
+export default router;
